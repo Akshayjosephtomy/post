@@ -5,6 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const postRoutes:Routes=[
+  {
+    path:"",component:PostComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -14,7 +21,8 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(postRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
